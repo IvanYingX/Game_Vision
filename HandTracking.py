@@ -10,8 +10,7 @@ class HandTracking:
         self.mpDraw = mp.solutions.drawing_utils
 
     def detect_hand(self, img, draw=True):
-        imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        results = self.hands.process(imgRGB)
+        results = self.hands.process(img)
 
         if results.multi_hand_landmarks:
             for handLMs in results.multi_hand_landmarks:
