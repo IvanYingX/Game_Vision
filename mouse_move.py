@@ -30,7 +30,6 @@ while True:
         x2, y2 = lm_list[12][1:3]
         fingers = hand.fingers_up(img, lm_list)
         if fingers[1] == 1 and fingers[2] == 0:
-            print(fingers)
             count = 0
             # Convert Coordinates
             x3 = np.interp(x1, (rectangle, wCam - rectangle), (0, wScr))
